@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEU Global | SEB Logic Engine</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'dark-bg': '#05070A',
+              'dark-surface': '#0F172A',
+              'dark-border': '#1E293B',
+              'light-bg': '#F8FAFC',
+              'light-surface': '#FFFFFF',
+              'light-border': '#CBD5E1',
+              'brand-blue': '#004B8D',
+              'brand-orange': '#FF6600',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            borderRadius: {
+              '3xl': '1.5rem',
+              '4xl': '2rem',
+              '5xl': '3rem',
+            }
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code&display=swap" rel="stylesheet">
+
+    <script type="importmap">
+{
+  "imports": {
+    "react/jsx-runtime": "https://aistudiocdn.com/react@^19.2.0/jsx-runtime",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      .glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      
+      .dark .glass {
+        background: rgba(15, 23, 42, 0.85);
+      }
+
+      .mesh-bg {
+        background-color: #f1f5f9;
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(0, 75, 141, 0.05) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, rgba(255, 102, 0, 0.05) 0px, transparent 50%),
+          radial-gradient(at 50% 100%, rgba(0, 75, 141, 0.05) 0px, transparent 50%);
+      }
+      
+      .dark .mesh-bg {
+        background-color: #05070a;
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(0, 75, 141, 0.15) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, rgba(255, 102, 0, 0.1) 0px, transparent 50%),
+          radial-gradient(at 50% 100%, rgba(0, 75, 141, 0.1) 0px, transparent 50%);
+      }
+
+      .tooltip-trigger:hover .tooltip-content {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -10px);
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .card-lift {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      }
+      .card-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb {
+        background: #94a3b8;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      .dark ::-webkit-scrollbar-thumb { background: #475569; }
+    </style>
+  </head>
+  <body class="mesh-bg dark:text-slate-100 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
