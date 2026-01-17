@@ -291,11 +291,11 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Container */}
-      <main className="flex-1 max-w-[1440px] mx-auto w-full p-6 md:p-10 space-y-10">
+<main className="max-w-8xl mx-auto px-6 mt-8 relative flex gap-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
-          <div className="lg:col-span-8 flex flex-col gap-10">
+          <div className="lg:col-span-8 flex flex-col gap-10 max-w-[800px]">
             {/* Dashboard Header Card */}
             <div className="bg-white dark:bg-dark-surface rounded-5xl p-10 border-b border-r border-blue-500 dark:border-blue-700 hover:border-orange-500 dark:hover:border-orange-700 shadow-lg relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-12 opacity-[0.03] group-hover:opacity-[0.07] transition-all -rotate-12 translate-x-12 -translate-y-8">
@@ -445,6 +445,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="lg:col-span-4 space-y-10">
+          
  {/* Regulatory Insights Card */}
             <div className="bg-white dark:bg-dark-surface rounded-5xl p-10 border border-slate-200 dark:border-slate-800 shadow-md space-y-8 transition-all hover:shadow-lg">
               <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Compliance Matrix</h3>
